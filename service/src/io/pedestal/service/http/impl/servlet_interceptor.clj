@@ -159,7 +159,7 @@
    :servlet-path      (.getServletPath servlet-req)
    :path-info         (path-info servlet-req)
    ::protocol         (.getProtocol servlet-req)
-   ::async-supported? (.isAsyncSupported servlet-req)})
+   ::async-supported? false})
 
 (defn- add-content-type [req-map ^HttpServletRequest servlet-req]
   (if-let [type (.getContentType servlet-req)]
